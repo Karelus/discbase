@@ -1,0 +1,12 @@
+POST http://localhost:3001/api/discs
+content-type: application/json
+
+{
+    "name": "Judge",
+    "manufacturer": "Dynamic Discs",
+    "type": "putter",
+    "speed": 2,
+    "glide": "4",
+    "turn": "0",
+    "fade": "0"
+}
