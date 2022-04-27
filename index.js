@@ -30,6 +30,7 @@ const app = express();
 // use middlewares
 app.use(express.json());
 app.use(cors());
+app.use(express.static("build"));
 
 morgan.token("data", (req, res) => {
   if (req.method === "POST") {
@@ -45,10 +46,6 @@ const generateID = () => {
   const maxId = discs.length > 0 ? Math.max(...discs.map((d) => d.id)) : 0;
   return maxId + 1;
 };
-
-app.get("/", (request, response) => {
-  response.send("<h1>Hello World</h1>");
-});
 
 app.get("/api/discs", (request, response) => {
   response.json(discs);
