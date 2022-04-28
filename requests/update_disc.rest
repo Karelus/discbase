@@ -1,0 +1,12 @@
+PUT http://localhost:3001/api/discs/626a460d73f919872b10759e
+content-type: application/json
+
+{
+    "name": "New Raptor",
+    "manufacturer": "Discraft",
+    "type": "fairway driver",
+    "speed": 2,
+    "glide": 4,
+    "turn": 0,
+    "fade": 3
+}
