@@ -4,6 +4,7 @@ const morgan = require("morgan")
 const app = express()
 const cors = require("cors")
 const usersRouter = require("./controllers/users")
+const loginRouter = require("./controllers/login")
 const bagsRouter = require("./controllers/bags")
 const discsRouter = require("./controllers/discs")
 const middleware = require("./utils/middleware")
@@ -36,6 +37,7 @@ app.use(
 )
 
 app.use("/api/users", usersRouter)
+app.use("/api/login", loginRouter)
 app.use("/api/bags", bagsRouter)
 app.use("/api/discs", discsRouter)
 
