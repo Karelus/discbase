@@ -2,10 +2,10 @@ POST http://localhost:3001/api/bags
 content-type: application/json
 
 {
+    "name": "",
     "model": {
-        "name": "BP-V1",
-        "manufacturer": "Prodigy" 
+        "name": "",
+        "manufacturer": "" 
     },
-    "discs": [
-    ]
+    "userId": ""
 }

@@ -50,4 +50,6 @@ discSchema.set("toJSON", {
   },
 })
 
-module.exports = mongoose.model("Disc", discSchema)
+const Disc = mongoose.model("Disc", discSchema)
+
+module.exports = Disc

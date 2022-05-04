@@ -1,4 +1,6 @@
 const Disc = require("../models/disc")
+const User = require("../models/user")
+const Bag = require("../models/bag")
 
 const initialDiscs = [
   {
@@ -46,13 +48,43 @@ const nonExistingId = async () => {
   return disc._id.toString()
 }
 
+const initialBags = [
+  {
+    name: "bag 1",
+    model: {
+        name: "bagmodel",
+        manufacturer: "Prodigy" 
+    }
+  },
+  {
+    name: "bag 2",
+    model: {
+        name: "bagmodel2",
+        manufacturer: "Prodigy" 
+    }
+  }
+]
+
 const discsInDb = async () => {
   const discs = await Disc.find({})
   return discs.map((disc) => disc.toJSON())
 }
 
+const usersInDb = async () => {
+  const users = await User.find({})
+  return users.map((user) =>  user.toJSON())
+}
+
+const bagsInDb = async () => {
+  const bags = await Bag.find({})
+  return bags.map((bag) => bag.toJSON())
+}
+
 module.exports = {
   initialDiscs,
+  initialBags,
   nonExistingId,
   discsInDb,
+  usersInDb,
+  bagsInDb
 }

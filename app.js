@@ -3,6 +3,7 @@ const express = require("express")
 const morgan = require("morgan")
 const app = express()
 const cors = require("cors")
+const usersRouter = require("./controllers/users")
 const bagsRouter = require("./controllers/bags")
 const discsRouter = require("./controllers/discs")
 const middleware = require("./utils/middleware")
@@ -34,6 +35,7 @@ app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms :data")
 )
 
+app.use("/api/users", usersRouter)
 app.use("/api/bags", bagsRouter)
 app.use("/api/discs", discsRouter)
 

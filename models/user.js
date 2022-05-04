@@ -3,7 +3,6 @@ const mongoose = require("mongoose")
 const userSchema = mongoose.Schema({
   username: { type: String, required: true, maxLength: 50 },
   passwordHash: String,
-  isAdmin: Boolean,
   bags: [
     {
       type: mongoose.Schema.Types.ObjectId,

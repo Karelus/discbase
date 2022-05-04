@@ -9,10 +9,10 @@ const bagSchema = new mongoose.Schema({
         name: {type: String},
         manufacturer: {type: String}
     },
-    // user: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: "User"
-    // },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
     maxDiscs: {
         type: Number,
         required: true,
