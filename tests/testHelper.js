@@ -52,17 +52,17 @@ const initialBags = [
   {
     name: "bag 1",
     model: {
-        name: "bagmodel",
-        manufacturer: "Prodigy" 
-    }
+      name: "bagmodel",
+      manufacturer: "Prodigy",
+    },
   },
   {
     name: "bag 2",
     model: {
-        name: "bagmodel2",
-        manufacturer: "Prodigy" 
-    }
-  }
+      name: "bagmodel2",
+      manufacturer: "Prodigy",
+    },
+  },
 ]
 
 const discsInDb = async () => {
@@ -72,7 +72,7 @@ const discsInDb = async () => {
 
 const usersInDb = async () => {
   const users = await User.find({})
-  return users.map((user) =>  user.toJSON())
+  return users.map((user) => user.toJSON())
 }
 
 const bagsInDb = async () => {
@@ -86,5 +86,5 @@ module.exports = {
   nonExistingId,
   discsInDb,
   usersInDb,
-  bagsInDb
+  bagsInDb,
 }
